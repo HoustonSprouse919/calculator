@@ -2,39 +2,43 @@
     <head>
         <title>Calculator</title>
         <link rel="stylesheet" href="styles.css">
+
     </head>
     <body>
         <div id = main>
-        <h1>Equation Computer</h1>
+        <h1>Calculator</h1>
         <div id="container">
             <div id ="display">
-                <h1>placeHolder</h1>
+                <div id = "content"> 
+                    <h1>content</h1></div>
             </div>
             <div id ="buttons">
-                <button id="1">1</button>
-                <button id="2">2</button>
-                <button id="3">3</button>
-                <button id="+">+</button>
-                <button id="4">4</button>
-                <button id="5">5</button>
-                <button id="6">6</button>
-                <button id="/">/</button>
-                <button id="7">7</button>
-                <button id="8">8</button>
-                <button id="9">9</button>
-                <button id="*">*</button>
-                <button id="=">=</button>
-                <button id="clear">clear</button>
-                <button id=".">.</button>
-                <button id="-">-</button>
+                <button id="one" onclick="num(1)">1</button>
+                <button id="two" onclick="num(2)">2</button>
+                <button id="three" onclick="num(3)">3</button>
+                <button id="plus"onclick="plus()" >+</button>
+                <button id="four" onclick="num(4)">4</button>
+                <button id="five" onclick="num(5)">5</button>
+                <button id="six" onclick="num(6)">6</button>
+                <button id="divide" onclick="divide()">/</button>
+                <button id="seven" onclick="num(7)">7</button>
+                <button id="eight" onclick="num(8)">8</button>
+                <button id="nine" onclick="num(9)">9</button>
+                <button id="multiply" onclick="multiply()">*</button>
+                <button id="equal" onclick="equal()">=</button>
+                <button id="clear" onclick="clear()">clear</button>
+                <button id="decimal" onclick="decimal()">.</button>
+                <button id="subtract" onclick="subtract()">-</button>
             </div>
 
 
         </div>
-        <button id="gridBtn" onclick="gridChooser()">Click here to adjust grid size! :)</button>
+        <!-- <button id="gridBtn" onclick="gridChooser()">Click here to adjust grid size! :)</button>
     </div>
+-->
       </body>
+      <script src="javascript.js"></script>
+
       <footer>Created by Houston Sprouse</footer>
-      <script src="js-file.js"></script>
       
 </html>
