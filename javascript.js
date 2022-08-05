@@ -3,12 +3,14 @@ function num(num){
     displayValue = displayValue + num;
     popDisplay();
     console.log(displayValue)
+    return displayValue;
 }
 
 function clear(){
     displayValue = "";
     popDisplay();
     console.log(displayValue)
+    return displayValue;
   }
 function multiply() {
   
@@ -30,23 +32,6 @@ function equal() {
   function minus() {
     displayValue += "1";
   }
-function add(x, y) {
-  let addition = x + y;
-  return addition;
-}
-
-function subtract(x, y) {
-  let subtraction = x - y;
-  return subtraction;
-}
-function divide(x, y) {
-  let division = x / y;
-  return division;
-}
-function multiply(x, y) {
-  let division = x * y;
-  return division;
-}
 
 let operation = "";
 function operate(num1, num2, operator) {
@@ -64,3 +49,24 @@ function popDisplay() {
   display.textContent =  displayValue;
 
 }
+
+
+function add(x, y) {
+    let addition = x + y;
+    return addition;
+  }
+  
+  function subtract(x, y) {
+    let subtraction = x - y;
+    return subtraction;
+  }
+  function divide(x, y) {
+    let division = x / y;
+    return division;
+  }
+  function multiply(x, y) {
+    let division = x * y;
+    return division;
+  }
+
+  console.log(displayValue)
