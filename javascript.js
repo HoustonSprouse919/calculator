@@ -12,6 +12,10 @@ function num(num){ //adds full functionality for pressing all the numbered butto
 function clearDisplay(){  //for some reason using clear as the function name wouldn't work
     displayValue = "clear";
     popDisplay();
+    operator = "";
+    firstNum = "";
+    op = "";
+    numOp = 0;
     displayValue = "";
   }
 function signs(sign) {
@@ -19,15 +23,15 @@ function signs(sign) {
   operator = sign;
   firstNum = displayValue;
   displayValue = ""
-  display.textContent =  displayValue;
+  display.textContent =  sign;
   numOp =1;
   } else if(numOp >0){
     equal();
     operator = sign;
     firstNum = displayValue;
     displayValue = ""
-    display.textContent =  displayValue;
-    numOp=0;
+    display.textContent =  sign;
+    numOp== 0;
   }
 }
 
@@ -35,25 +39,19 @@ function signs(sign) {
 function equal() {
  let num1 = parseInt(firstNum);  //these two are correctly giving numbers
  let num2 = parseInt(displayValue);
- console.log(num1);
- console.log(typeof num1);
- console.log(num2);
- console.log(typeof num2);
- console.log(operator);
- console.log(typeof operator);
  
- displayValue = operate(num1,num2,operator);
+ let operation = operate(num1,num2,operator);
+ displayValue = operation.toString();
     popDisplay();
-    console.log(displayValue)
 }
 function operate(num1, num2, operator) { //this is used to call the actual operations
-  if (operator == "add") {  //note not having the operation names as strings with "" caused it to not work
+  if (operator == "+") {  //note not having the operation names as strings with "" caused it to not work
     op = add(num1, num2);
-  } else if (operator == "subtract") {
+  } else if (operator == "-") {
     op = subtract(num1, num2);
-  } else if (operator == "multiply") {
+  } else if (operator == "*") {
     op = multiply(num1, num2);
-  } else if (operator == "divide") {
+  } else if (operator == "/") {
     op = divide(num1, num2);
   }
   return op;
@@ -81,4 +79,3 @@ function add(x, y) {
     let division = x * y;
     return division;
   }
-  console.log(operate(7, 3, subtract));
