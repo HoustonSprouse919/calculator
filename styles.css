@@ -17,6 +17,7 @@ background-color: rgb(133, 133, 131);
 color: white;
 border-radius: 5px;
 display: flex;
+font-family: 'andale mono', monospace;
 font-size: 80px;
 height: 80px;
 margin: auto;
