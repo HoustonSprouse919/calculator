@@ -1,15 +1,16 @@
-let displayValue = ""; //global variable used for displaying and also math
+let displayValue = ""; //global variables used for displaying and also math
 let operator = "";
 let firstNum = "";
 let op = "";
 let numOp = 0;
+
 function num(num){ //adds full functionality for pressing all the numbered buttons
     displayValue = displayValue + num;
     popDisplay();
     return displayValue;
 }
 
-function clearDisplay(){  //for some reason using clear as the function name wouldn't work
+function clearDisplay(){  //used to clearDisplay and data completely for some reason using clear as the function name wouldn't work
     displayValue = "clear";
     popDisplay();
     operator = "";
@@ -18,7 +19,7 @@ function clearDisplay(){  //for some reason using clear as the function name wou
     numOp = 0;
     displayValue = "";
   }
-function signs(sign) {
+function signs(sign) { //this is used to take in whatever sign the user presses, It also helps keep track of how many have been pressed to let them string together multiple
   if(numOp== 0){
   operator = sign;
   firstNum = displayValue;
@@ -37,7 +38,7 @@ function signs(sign) {
 
 
 function equal() {
- let num1 = parseInt(firstNum);  //these two are correctly giving numbers
+ let num1 = parseInt(firstNum);  //numbers used for the calculation that we NEED to change to int!
  let num2 = parseInt(displayValue);
  
  let operation = operate(num1,num2,operator);
@@ -58,11 +59,9 @@ function operate(num1, num2, operator) { //this is used to call the actual opera
 }
 function popDisplay() {
   display.textContent =  displayValue;
-
-
 }
 
-
+//simple functions that we call in our operate function
 function add(x, y) {
     let addition = x + y;
     return addition;
