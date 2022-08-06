@@ -1,49 +1,45 @@
-let displayValue = "";
-function num(num){
+let displayValue = ""; //global variable used for displaying and also math
+let operator = ""
+let firstNum = ""
+let op = ""
+function num(num){ //adds full functionality for pressing all the numbered buttons
     displayValue = displayValue + num;
     popDisplay();
-    console.log(displayValue)
     return displayValue;
 }
 
-function clear(){
-    displayValue = "";
+function clearDisplay(){  //for some reason using clear as the function name wouldnt work
+    displayValue = "0";
     popDisplay();
-    console.log(displayValue)
     return displayValue;
   }
-function multiply() {
-  
+function signs(sign) {
+  operator = sign
+  firstNum = displayValue;
+  displayValue = ""
+  display.textContent =  displayValue;
+
 }
 
-function divide() {
-  
-}
 
 function equal() {
+  let num1 = parseInt(firstNum);
+  let num2 = parseInt(displayValue);
+  console.log(num1);
+ displayValue = operate(num1, num2, operator);
     popDisplay();
 }
-  function decimal() {
-    displayValue += "1";
-  }
-  function plus() {
-    displayValue += "1";
-  }
-  function minus() {
-    displayValue += "1";
-  }
-
-let operation = "";
 function operate(num1, num2, operator) {
-  if (operator === add) {
-    return add(num1, num2);
+  if (operator === plus) {
+    op = add(num1, num2);
   } else if (operator === subtract) {
-    return subtract(num1, num2);
+    op = subtract(num1, num2);
   } else if (operator === multiply) {
-    return multiply(num1, num2);
+    op = multiply(num1, num2);
   } else if (operator === divide) {
-    return divide(num1, num2);
+    op = divide(num1, num2);
   }
+  return op;
 }
 function popDisplay() {
   display.textContent =  displayValue;
@@ -68,5 +64,3 @@ function add(x, y) {
     let division = x * y;
     return division;
   }
-
-  console.log(displayValue)
