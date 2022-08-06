@@ -14,8 +14,10 @@ h1{
 #display{
 align-items: bottom;
 background-color: rgb(133, 133, 131);
-color: white;
 border-radius: 5px;
+outline-style: solid;
+outline-color: black;
+color: white;
 display: flex;
 font-family: 'andale mono', monospace;
 font-size: 80px;
@@ -28,9 +30,10 @@ justify-content: flex-end;
 }
 button{
     color: ivory;
-    background-color:rgb(77, 77, 77);
+    background-color:rgb(116, 3, 190);
+    border-color: black;
     border-radius: 5px;
-    font-size: 25px;
+    font-size: 35px;
     font-weight: bold;
     height: 100px;
     margin: 2px;
@@ -54,10 +57,9 @@ button{
     border-radius: 10px;
     margin-top:100px ;
     display: inline-block;
-    height: 900px;
-    width: 700px;
+    height: 850px;
+    width: 650px;
     background-color: rgb(116, 3, 190);
-
 }
 #buttons{
 margin-top: 20px;
