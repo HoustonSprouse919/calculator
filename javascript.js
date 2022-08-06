@@ -14,7 +14,7 @@ function clearDisplay(){  //for some reason using clear as the function name wou
     return displayValue;
   }
 function signs(sign) {
-  operator = sign
+  operator = sign;
   firstNum = displayValue;
   displayValue = ""
   display.textContent =  displayValue;
@@ -23,14 +23,14 @@ function signs(sign) {
 
 
 function equal() {
-  let num1 = parseInt(firstNum);
+  let num1 = parseInt(firstNum);  //these two are correctly giving numbers
   let num2 = parseInt(displayValue);
-  console.log(num1);
- displayValue = operate(num1, num2, operator);
+ displayValue = operate(num1,num2,operator);
     popDisplay();
+    console.log(displayValue)
 }
 function operate(num1, num2, operator) {
-  if (operator === plus) {
+  if (operator === add) {
     op = add(num1, num2);
   } else if (operator === subtract) {
     op = subtract(num1, num2);
@@ -64,3 +64,4 @@ function add(x, y) {
     let division = x * y;
     return division;
   }
+  //console.log(operate(7, 3, plus));
