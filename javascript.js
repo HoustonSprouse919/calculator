@@ -56,7 +56,9 @@ function equal() {
  displayValue = operation.toString();
  operator = "";
  numOp = 0;
+ firstNum = displayValue;
  popDisplay();
+ displayValue = "";
 }
 }
 function operate(num1, num2, operator) { //this is used to call the actual operations
