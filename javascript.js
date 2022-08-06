@@ -1,6 +1,6 @@
 let displayValue = ""; //global variables used for displaying and also math
 let operator = "";
-let firstNum = "";
+let newFirstNum = "";
 let op = "";
 let numOp = 0;
 
@@ -14,7 +14,7 @@ function clearDisplay(){  //used to clearDisplay and data completely for some re
     displayValue = "clear";
     popDisplay();
     operator = "";
-    firstNum = "";
+    newFirstNum = "";
     op = "";
     numOp = 0;
     displayValue = "";
@@ -22,14 +22,14 @@ function clearDisplay(){  //used to clearDisplay and data completely for some re
 function signs(sign) { //this is used to take in whatever sign the user presses, It also helps keep track of how many have been pressed to let them string together multiple
   if(numOp== 0){
   operator = sign;
-  firstNum = displayValue;
+  newFirstNum = displayValue;
   displayValue = ""
   display.textContent =  sign;
   numOp =1;
   } else if(numOp >0){
     equal();
     operator = sign;
-    firstNum = displayValue;
+    newFirstNum = displayValue;
     displayValue = ""
     display.textContent =  sign;
     numOp== 0;
@@ -38,14 +38,14 @@ function signs(sign) { //this is used to take in whatever sign the user presses,
 
 
 function equal() {
- let num1 = parseInt(firstNum);  //numbers used for the calculation that we NEED to change to int!
+ let num1 = parseInt(newFirstNum);  //numbers used for the calculation that we NEED to change to int!
  let num2 = parseInt(displayValue);
  console.log(num1);
  if(num1 == 0 && num2 ==0){
  displayValue = "Nice Try";
     popDisplay();
     operator = "";
-    firstNum = "";
+    newFirstNum = "";
     op = "";
     numOp = 0;
     displayValue = "";
