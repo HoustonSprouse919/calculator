@@ -1,9 +1,9 @@
 body{
     background-color: rgb(18, 193, 247);
     display: inline-block;
+    margin: auto;
     text-align: center;
     width: 100%;
-    margin: auto;
 }
 h1{
     color: rgb(255, 255, 255);
@@ -15,24 +15,26 @@ h1{
 align-items: bottom;
 background-color: rgb(133, 133, 131);
 border-radius: 5px;
-outline-style: solid;
-outline-color: black;
 color: white;
 display: flex;
 font-family: 'andale mono', monospace;
 font-size: 80px;
 height: 80px;
+justify-content: flex-end;
 margin: auto;
 margin-top: 30px;
+outline-style: solid;
+outline-color: black;
+overflow: hidden;
 padding: 20px;
 width: 80%;
-justify-content: flex-end;
+
 }
 button{
-    color: ivory;
     background-color:rgb(116, 3, 190);
     border-color: black;
     border-radius: 5px;
+    color: ivory;
     font-size: 35px;
     font-weight: bold;
     height: 100px;
@@ -48,18 +50,18 @@ button{
     border-radius: 5px;
     border-style: solid;
     display: inline-block;
-    width: 500px;
     height: 700px;
-    text-align: center;
     margin-bottom: 40px;
+    text-align: center;
+    width: 500px;
 }
 #main{
+    background-color: rgb(116, 3, 190);
     border-radius: 10px;
-    margin-top:100px ;
     display: inline-block;
     height: 850px;
+    margin-top:100px ;
     width: 650px;
-    background-color: rgb(116, 3, 190);
 }
 #buttons{
 margin-top: 20px;

@@ -40,6 +40,7 @@ function signs(sign) { //this is used to take in whatever sign the user presses,
 function equal() {
  let num1 = parseInt(firstNum);  //numbers used for the calculation that we NEED to change to int!
  let num2 = parseInt(displayValue);
+ console.log(num1);
  if(num1 == 0 && num2 ==0){
  displayValue = "Nice Try";
     popDisplay();
@@ -48,10 +49,14 @@ function equal() {
     op = "";
     numOp = 0;
     displayValue = "";
- } else{
+ } else if(isNaN(num1)){
+  popDisplay();
+ }else{
  let operation = operate(num1,num2,operator);
  displayValue = operation.toString();
-    popDisplay();
+ operator = "";
+ numOp = 0;
+ popDisplay();
 }
 }
 function operate(num1, num2, operator) { //this is used to call the actual operations
@@ -88,4 +93,3 @@ function add(x, y) {
     let division = x * y;
     return division;
   }
-  popDisplay();
