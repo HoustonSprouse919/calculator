@@ -59,6 +59,7 @@ function operate(num1, num2, operator) { //this is used to call the actual opera
 function popDisplay() {
   display.textContent =  displayValue;
 
+
 }
 
 
@@ -79,3 +80,4 @@ function add(x, y) {
     let division = x * y;
     return division;
   }
+  popDisplay();
