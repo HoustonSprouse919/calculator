@@ -12,7 +12,7 @@ h1{
     margin-top: 30px;
 }
 #display{
-align-items: flex-end;
+align-items: bottom;
 background-color: rgb(133, 133, 131);
 color: white;
 border-radius: 5px;
@@ -21,7 +21,7 @@ font-family: 'andale mono', monospace;
 font-size: 80px;
 height: 80px;
 margin: auto;
-margin-top: 20px;
+margin-top: 30px;
 padding: 20px;
 width: 80%;
 justify-content: flex-end;
