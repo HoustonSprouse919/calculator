@@ -40,10 +40,19 @@ function signs(sign) { //this is used to take in whatever sign the user presses,
 function equal() {
  let num1 = parseInt(firstNum);  //numbers used for the calculation that we NEED to change to int!
  let num2 = parseInt(displayValue);
- 
+ if(num1 == 0 && num2 ==0){
+ displayValue = "Nice Try";
+    popDisplay();
+    operator = "";
+    firstNum = "";
+    op = "";
+    numOp = 0;
+    displayValue = "";
+ } else{
  let operation = operate(num1,num2,operator);
  displayValue = operation.toString();
     popDisplay();
+}
 }
 function operate(num1, num2, operator) { //this is used to call the actual operations
   if (operator == "+") {  //note not having the operation names as strings with "" caused it to not work
