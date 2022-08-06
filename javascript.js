@@ -2,23 +2,33 @@ let displayValue = ""; //global variable used for displaying and also math
 let operator = "";
 let firstNum = "";
 let op = "";
+let numOp = 0;
 function num(num){ //adds full functionality for pressing all the numbered buttons
     displayValue = displayValue + num;
     popDisplay();
     return displayValue;
 }
 
-function clearDisplay(){  //for some reason using clear as the function name wouldnt work
-    displayValue = "0";
+function clearDisplay(){  //for some reason using clear as the function name wouldn't work
+    displayValue = "clear";
     popDisplay();
-    return displayValue;
+    displayValue = "";
   }
 function signs(sign) {
+  if(numOp== 0){
   operator = sign;
   firstNum = displayValue;
   displayValue = ""
   display.textContent =  displayValue;
-
+  numOp =1;
+  } else if(numOp >0){
+    equal();
+    operator = sign;
+    firstNum = displayValue;
+    displayValue = ""
+    display.textContent =  displayValue;
+    numOp=0;
+  }
 }
 
 
